@@ -170,9 +170,9 @@ This is what we're starting from — team, budget, what's already in motion, wha
 | 29% monthly App Store churn vs. 38% 12-month retention claim | Metric definition mismatch confusing the team | Reconcile with Devon + Customer.io data |
 | Mira post-session reflection scope unknown | Blocks Variant B and Variant C onboarding tests | Resolve with Devon |
 
-### Audit rubric snapshot (17-section, lens from `audit-marketing`)
+### Audit rubric snapshot (17-section)
 
-Scored 0–5. This isn't a full audit — it's what we'd score Quietude today using the rubric as a current-state lens. The full audit can be run via `/audit-marketing quietude.app` if Alex wants a formal artifact.
+Scored 0–5 from materials, using the embedded rubric in `references/current-state-rubric.md`. Marked "scored from materials" rather than "formal audit" — Alex can push back on any score where they have better data.
 
 | # | Section | Score | Note |
 |---|---|---|---|
@@ -250,7 +250,7 @@ Held until seed funding lands. Initial test budget: $5–10K/mo split across App
 
 ### Skills + tools
 
-- **Skills:** `seo-audit`, `ai-seo`, `programmatic-seo`, `schema`, `content-strategy`, `competitors`, `launch`, `ads`, `ad-creative`, `social`, `typefully`, `analytics`, `audit-marketing`, `copywriting`, `marketing-website-design`, `free-tools`
+- **Skills:** `seo-audit`, `ai-seo`, `programmatic-seo`, `schema`, `content-strategy`, `competitors`, `launch`, `ads`, `ad-creative`, `social`, `typefully`, `analytics`, `copywriting`, `marketing-website-design`, `free-tools`
 - **MCPs / APIs:** Ahrefs API, DataForSEO API, Typefully MCP (LinkedIn scheduling), GA4 MCP (when wired), GitHub MCP (`quietude-promo` repo work), Notion (knowledge directory), Stripe MCP (LTV / paid-CAC math), `agent-browser` (LinkedIn drafting + testing), `defuddle` (research)
 
 ---
@@ -627,12 +627,12 @@ The fCMO's job is to:
 
 | Stage | Primary skills | Supporting skills |
 |---|---|---|
-| **Acquisition** | `seo-audit`, `ai-seo`, `programmatic-seo`, `schema`, `content-strategy`, `competitors`, `ads`, `ad-creative`, `social`, `typefully`, `audit-marketing` | `launch`, `free-tools`, `analytics`, `cold-email`, `copywriting`, `marketing-website-design` |
+| **Acquisition** | `seo-audit`, `ai-seo`, `programmatic-seo`, `schema`, `content-strategy`, `competitors`, `ads`, `ad-creative`, `social`, `typefully` | `launch`, `free-tools`, `analytics`, `cold-email`, `copywriting`, `marketing-website-design` |
 | **Activation** | `onboarding`, `signup`, `paywalls`, `cro`, `copywriting`, `copy-editing`, `copycraft` | `marketing-website-design`, `ab-testing`, `marketing-psychology`, `cro`, `popups` |
 | **Retention** | `emails`, `churn-prevention` | `copywriting`, `copy-editing`, `ab-testing`, `paywalls` |
 | **Referral** | `referrals`, `social` | `copywriting`, `marketing-website-design`, `emails` |
 | **Revenue** | `pricing`, `paywalls`, `sales-enablement`, `revops` | `ab-testing`, `copywriting` |
-| **Cross-cutting** (brand, intelligence) | `positioning`, `brand-voice`, `customer-research`, `marketing-psychology`, `audit`, `audit-marketing` | `brand-strategy`, `brand-guidelines`, `brand-style-guide`, `branding`, `marketing-ideas`, `diagram-maker`, `product-marketing` |
+| **Cross-cutting** (brand, intelligence) | `product-marketing`, `customer-research`, `marketing-psychology` | `marketing-ideas`, `diagram-maker` |
 
 ### MCPs / APIs mapped to stages
 

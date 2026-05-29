@@ -2,7 +2,7 @@
 
 This doc maps every marketing-skill and every relevant MCP/API integration to the AARRR stage(s) it primarily serves. It's the source for Section 11 of every plan.
 
-> **Note on scope.** Skills below are drawn from the broader Claude Code marketplace ecosystem — not all live in this `marketingskills` repo. Skills shown without a `:` prefix (e.g., `seo-audit`) are in this repo. Skills referenced from adjacent marketplaces (e.g., `cf-skills:audit-marketing`, `vercel:agent-browser`, `compound-engineering:diagram-maker`, `marketing-skills:typefully`) are optional — substitute equivalents if not installed. When a plan references a skill that isn't available, fall back to the underlying tactic and call it out in Section 13's open decisions.
+> **Note on scope.** Skills below live in this `marketingskills` repo. A few references point to optional tools from adjacent Claude Code marketplaces (e.g., `vercel:agent-browser`, `compound-engineering:diagram-maker`) — substitute equivalents if not installed. When a plan references a skill or tool that isn't available, fall back to the underlying tactic and call it out in Section 13's open decisions.
 
 ## The thesis
 
@@ -32,7 +32,6 @@ The plan's Section 11 makes this thesis explicit by:
 | `typefully` | Schedule/post tweets, threads, LinkedIn content | Cadence operations for founder-led channels |
 | `cold-email` | Write B2B cold outreach + sequences | Outbound for B2B SaaS / hybrid businesses |
 | `analytics` | Set up tracking, GA4, conversion events | Funnel instrumentation |
-| `audit-marketing` | Run the 17-section product marketing audit | Comprehensive scoring of current state |
 | `free-tools` | Plan engineering-as-marketing free tools | Build tools that generate links + leads |
 | `marketing-website-design` | Design marketing sites with intention | Pillar/landing page design |
 | `launch` | Plan and execute launches (Product Hunt, GA, feature launches) | GTM moments — strategy + tactical execution |
@@ -87,23 +86,10 @@ The plan's Section 11 makes this thesis explicit by:
 
 | Skill | What it does | Primary use |
 |---|---|---|
-| `positioning` | Define market positioning | Section 2 of plan (Strategic frame) |
+| `product-marketing` | Set up the `.agents/product-marketing.md` context file (positioning, ICP, voice) | Foundational — run first; every section of the plan references this |
 | `customer-research` | Conduct customer interviews + surveys | Section 2 + Section 3 (Current state) |
-| `brand-voice` | Apply / enforce brand voice | Every section that involves copy |
-| `brand-strategy` | Brand strategy workshop (stage-3 from CF process) | Foundational brand work |
-| `brand-guidelines` | Apply brand guidelines (e.g., Anthropic's) | Cross-functional brand artifact creation |
-| `brand-style-guide` | Build a brand style guide doc (stage-7) | Handoff to designers |
-| `branding` | Implement a defined brand in code | Building brand-aligned UI |
-| `product-marketing` | Set up the `.agents/product-marketing.md` context file | Persistent client context for future skill runs |
 | `marketing-psychology` | Apply behavioral science | Cross-cuts copy, CRO, paywalls |
 | `marketing-ideas` | The 139-idea library | Section 12 of plan (Idea bank) |
-| `diagram-maker` | Create visual diagrams | Flows, architecture, RACI charts |
-
-### CF process / workflow skills (less directly used)
-
-These exist for full client engagements (Conversion Factory process). The plan skill doesn't usually invoke them directly, but they show up in RACI when a client is doing a full revamp.
-
-`client-intake` (stage-0), `sitemap-workshop` (stage-4), `creative-direction` (stage-5), `logo-design` (stage-6), `wireframes` (stage-9), `website-build-native` / `-webflow` / `-framer` (stage-10), `client-handoff` (stage-11), `growth-engine` (stage-13)
 
 ## MCPs and APIs mapped to AARRR
 

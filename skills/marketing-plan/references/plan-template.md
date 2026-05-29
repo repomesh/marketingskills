@@ -117,9 +117,9 @@ Table:
 Stuck things are the most leverage-positive places to focus the first weeks of the 90-day plan.
 
 ### Audit rubric snapshot
-17-section scored snapshot using the `audit-marketing` rubric as a lens. See `references/current-state-rubric.md` for the full rubric.
+17-section scored snapshot using the embedded current-state rubric. See `references/current-state-rubric.md` for the full rubric and scoring guides.
 
-If a formal `/audit-marketing` was run, paste the scored output. If not, note "lens used, not formal audit."
+If a prior scored audit exists, paste those scores in. Otherwise score from available materials and note "scored from materials" under the heading.
 
 | # | Section | Score | Note |
 |---|---|---|---|

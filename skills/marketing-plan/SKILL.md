@@ -1,11 +1,11 @@
 ---
 name: marketing-plan
-description: When the user needs a comprehensive marketing plan for a client, a company they advise, or their own product. Also use when the user mentions "marketing plan," "growth plan," "GTM plan," "go-to-market plan," "AARRR plan," "90-day marketing plan," "12-month marketing roadmap," "fractional CMO plan," or "fCMO plan." Generates an exhaustive 13-section plan structured by AARRR (Acquisition, Activation, Retention, Referral, Revenue), customized to the client's current budget, team, and stage, mapped to future funding milestones, cross-referenced with the 139-idea marketing-ideas library and the 17-section audit-marketing rubric, with a full marketing operations stack showing which skills and MCP/API integrations execute each part. Outputs a Notion-paste-ready markdown document. For scoring current state, see audit-marketing. For positioning before planning, see positioning. For stage-specific deep work, see onboarding, signup, emails, referrals, pricing.
+description: When the user needs a comprehensive marketing plan for a client, a company they advise, or their own product. Also use when the user mentions "marketing plan," "growth plan," "GTM plan," "go-to-market plan," "AARRR plan," "90-day marketing plan," "12-month marketing roadmap," "fractional CMO plan," or "fCMO plan." Generates an exhaustive 13-section plan structured by AARRR (Acquisition, Activation, Retention, Referral, Revenue), customized to the client's current budget, team, and stage, mapped to future funding milestones, cross-referenced with the 139-idea marketing-ideas library and an embedded 17-section current-state audit rubric, with a full marketing operations stack showing which skills and MCP/API integrations execute each part. Outputs a Notion-paste-ready markdown document. For positioning and ICP context before planning, see product-marketing. For stage-specific deep work, see onboarding, signup, emails, referrals, pricing.
 ---
 
 # Marketing Plan
 
-You are an expert marketing strategist operating at fCMO (fractional CMO) level. Your job is to produce a comprehensive, executable 12-month marketing plan for a specific client or company, structured by AARRR (Acquisition, Activation, Retention, Referral, Revenue), customized to their actual budget, team, stage, and capabilities, and cross-referenced with the full marketing-ideas library and audit-marketing rubric.
+You are an expert marketing strategist operating at fCMO (fractional CMO) level. Your job is to produce a comprehensive, executable 12-month marketing plan for a specific client or company, structured by AARRR (Acquisition, Activation, Retention, Referral, Revenue), customized to their actual budget, team, stage, and capabilities, and cross-referenced with the full marketing-ideas library and the embedded 17-section current-state audit rubric.
 
 The deliverable is a single Notion-paste-ready markdown document — the kind of strategy artifact a fractional CMO would present to founders. It must be specific to the client (not generic), exhaustive (covers every tactical surface area, not just what's prescribed), and operationally honest (reflects what their team can actually execute with their current stack and headcount).
 
@@ -17,7 +17,7 @@ Invoke this skill when:
 - A founder needs a 12-month marketing roadmap they can share with their team or investors
 - A team wants to consolidate scattered marketing work (SEO research, brand voice docs, audit findings, onboarding analyses) into a single coherent plan
 - The user explicitly asks for a "marketing plan," "growth plan," "GTM plan," "fCMO plan," "AARRR plan," or "90-day + 12-month marketing roadmap"
-- A previous `/audit-marketing` run produced findings that need to be sequenced into an action plan
+- An existing scored audit (from any prior current-state assessment) needs to be sequenced into an action plan
 
 **Do not use** when the user wants a tactical execution document for a single channel (use the channel-specific skill instead — `emails`, `ads`, `seo-audit`, `onboarding`, etc.), or when the user just wants marketing ideas without commitment to a plan (use `marketing-ideas`).
 
@@ -42,7 +42,7 @@ The full workflow lives in `references/methodology.md`. Quick summary:
 
 Read all available materials about the client. Pull data from any wired tools (Ahrefs, GA4 MCP, Stripe MCP, etc.). Conduct structured intake covering: client overview, ICP, current funnel state, funding state, team composition, marketing budget, channels currently active, what's already been done, what's in-flight, what's stuck, tooling stack. Save to `research.md`.
 
-If no `/audit-marketing` has been run on this client and useful, offer to run it before continuing.
+Use the embedded 17-section current-state rubric (`references/current-state-rubric.md`) as your scoring lens for Section 3 — score each section 0–5 against available materials.
 
 ### Phase 2 — REVIEW (walk through each of 13 sections interactively)
 
@@ -66,7 +66,7 @@ Full template lives in `references/plan-template.md`. The structure:
 
 1. **Executive summary** — 3 big bets, 90-day priorities, 12-month outcome. Written so it can be lifted into an investor or board update.
 2. **Strategic frame** — Category claim, ICP distilled, business-model logic, brand voice non-negotiables.
-3. **Current state** — Team, budget, what's done, what's in-flight, what's stuck. Scored against the 17-section `audit-marketing` rubric.
+3. **Current state** — Team, budget, what's done, what's in-flight, what's stuck. Scored against the embedded 17-section current-state rubric (`references/current-state-rubric.md`).
 4. **Acquisition** — How strangers become aware. Channels current + planned + skipped, 90-day and 12-month moves, skills + tools.
 5. **Activation** — How a new user has an experience that converts. Onboarding, first session, App Store / signup, paywall, lifecycle setup.
 6. **Retention** — How a converted user stays and deepens. Lifecycle flows, churn prevention, win-back, support-as-marketing.
@@ -94,19 +94,17 @@ Brand and content are **cross-cutting**, not their own AARRR stage — they serv
 
 ## The current-state rubric
 
-The plan's "Current State" section scores the client against the 17-section `audit-marketing` rubric. Full mapping in `references/current-state-rubric.md`.
+The plan's "Current State" section scores the client against the embedded 17-section rubric. Full rubric in `references/current-state-rubric.md` — it's the source of truth, not a derivative of any external skill.
 
-If the user has already run `/audit-marketing` on this client, ingest the scored output directly. If not, offer to run it before drafting Section 3, OR use the rubric as a lens against existing materials (faster, less rigorous — useful when client provides rich context but a formal audit hasn't happened).
+If the user already has a separately scored audit, ingest those scores directly into Section 3. Otherwise, score from available materials using the rubric as your lens — mark "scored from materials" in the section header so the team can push back where they have better data.
 
 ## Cross-references — skills this plan integrates with
 
-Some referenced skills live in this `marketingskills` repo; others live in adjacent Claude Code marketplaces (notably `cf-skills` for `audit-marketing` and `positioning`). The plan still works without external skills — it falls back to using the embedded rubric as a lens (see `references/current-state-rubric.md`).
+1. **`marketing-ideas`** — 139 proven marketing tactics. Section 12 of the plan cross-references every one to AARRR + client status. Detail in `references/idea-cross-reference.md`.
+2. **`product-marketing`** — Sets up the foundational `.agents/product-marketing.md` context file (positioning, ICP, voice). Read this first; Section 2 (Strategic frame) builds on it.
+3. **AARRR-stage-specific skills** — `onboarding`, `signup`, `emails`, `referrals`, `pricing`, etc. The "Marketing operations stack" (Section 11) maps these to AARRR stages.
 
-1. **`marketing-ideas`** *(this repo)* — 139 proven marketing tactics. Section 12 of the plan cross-references every one to AARRR + client status. Detail in `references/idea-cross-reference.md`.
-2. **`audit-marketing`** *(external — `cf-skills` repo)* — 17-section scored rubric. Section 3 uses this as the scoring lens; falls back to lens-only mode if the skill isn't installed.
-3. **AARRR-stage-specific skills** *(mostly this repo)* — `onboarding`, `signup`, `emails`, `referrals`, `pricing`, etc. The "Marketing operations stack" (Section 11) maps these to AARRR stages.
-
-The plan is **opinionated about which skills serve which stages.** Full mapping in `references/ops-stack-mapping.md` (which also lists optional external skills and substitutions).
+The plan is **opinionated about which skills serve which stages.** Full mapping in `references/ops-stack-mapping.md`.
 
 ## The marketing operations stack
 
@@ -204,10 +202,9 @@ The full schema for `progress.md` and the resumption decision tree live in `refe
 
 ## Related skills
 
-- **`audit-marketing`** — Run before planning to score current state across 17 sections. Output feeds Section 3 of the plan.
-- **`positioning`** — Run if positioning is unclear before planning. Output feeds Section 2.
+- **`product-marketing`** — Run first. Captures positioning, ICP, voice in `.agents/product-marketing.md` so every section of the plan references the same foundation.
 - **`marketing-ideas`** — Source of the 139 tactics in Section 12.
-- **`product-marketing`** — Sets up the client context file used at intake.
+- **`customer-research`** — Deepens the ICP and voice-of-customer inputs that feed Section 2 (Strategic frame).
 - **`onboarding`** — Deep work on Section 5 (Activation).
 - **`emails`** — Deep work on Section 6 (Retention) + onboarding emails in Section 5.
 - **`referrals`** — Deep work on Section 7 (Referral).

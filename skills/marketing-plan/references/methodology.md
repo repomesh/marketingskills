@@ -78,7 +78,7 @@ If `materials/` has files, read all of them. Common drops:
 - Customer research / ICP doc
 - App Store metrics / analytics snapshot
 - Lifecycle email inventory
-- Prior audit output (`audit_final_output.md` from `/audit-marketing`)
+- Prior audit output (any scored current-state assessment the team has run)
 - SEO research (`seo/plan.md`, `seo/keyword-shortlist.md`)
 - Kickoff call transcript
 - Founder Slack / async notes
@@ -172,14 +172,14 @@ What past work should this plan acknowledge?
 - What investors / board are asking about most
 - Any constraints not visible elsewhere (legal, partnership-related, brand-related)
 
-### Step 1.5 — Optionally run audit-marketing
+### Step 1.5 — Score current state against the rubric
 
-If no audit has been run on this client AND the user wants a formal scored current-state, offer:
-> *"Want me to run `/audit-marketing {client-domain}` before we draft the plan? It produces a 17-section scored audit that becomes the foundation of Section 3 (Current State). Takes ~30–60 min of walking through sections together."*
+Use the 17-section rubric in `references/current-state-rubric.md` as your scoring lens. Two modes:
 
-If user agrees, run that skill. Resume here when done.
+- **From rich materials.** When the team has shared decks, prior content audits, an existing brand voice doc, recent positioning work, or a kickoff call transcript — score from those. Mark "scored from materials" in the section heading.
+- **From a separately scored audit.** If the team already has a scored current-state assessment (in any format), ingest those numbers directly. Don't redo the work.
 
-If user declines (common when fCMO already has rich context), use the rubric as a current-state *lens* against existing materials — faster, less rigorous, captured in `references/current-state-rubric.md`.
+Either way, the output is the scored 17-row table that becomes Section 3 of the plan, followed by a 2–4 sentence "shape interpretation" calling out where strengths and gaps cluster.
 
 ### Step 1.6 — Write research.md
 
@@ -236,8 +236,8 @@ Compile everything into `research.md` with this structure:
 - Investor pressure points
 - Constraints
 
-## Audit-marketing scores
-[If run, paste section scores. If not run, mark "lens used, not formal audit."]
+## Current-state rubric scores
+[17 section scores using `references/current-state-rubric.md`. If a prior scored audit exists, paste those scores. Otherwise mark "scored from materials."]
 
 ## Materials read
 [List of files in materials/ + when read]
@@ -272,7 +272,7 @@ For each section, use the template at `references/plan-template.md` to draft. Th
 
 **Section 1 (Executive summary)** is synthesized from Sections 2–13 after they're all approved. Draft it last; present it first in the output document.
 
-**Section 3 (Current state)** is where audit-marketing output gets integrated. If a formal audit was run, paste the scored rubric. If not, use the rubric as a lens (see `references/current-state-rubric.md`).
+**Section 3 (Current state)** uses the embedded 17-section rubric in `references/current-state-rubric.md`. If a prior scored audit exists, paste those scores in. If not, score from available materials.
 
 **Sections 4–8 (AARRR)** each follow the same internal structure: current state, the plan (numbered moves), 90-day moves, 12-month outlook, skills + tools. Don't skip the skills + tools sub-section — it's what makes the plan operationally honest.
 

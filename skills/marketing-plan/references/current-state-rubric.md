@@ -1,15 +1,14 @@
 # Current State Rubric — 17-Section Scoring Lens
 
-The `audit-marketing` skill (in the `cf-skills` repo, `conversionfactory/cf-skills`) scores a company against 17 sections. This rubric is the scoring lens for Section 3 of every marketing plan — whether or not a formal audit has been run.
+This 17-section rubric is the source of truth for Section 3 ("Current State") of every marketing plan. Score each section 0–5 from available materials, then write a 2–4 sentence "shape interpretation" that names where strengths and gaps cluster.
 
-## The two paths
+## How to score
 
-**Path A — Formal audit run.** If `/audit-marketing {client-domain}` has been run, paste the scored output directly. Each of the 17 sections has a score (0–5) and findings. Section 3 of the plan uses this verbatim, with one addition: an interpretive "shape" paragraph after the table.
+**From rich materials.** When the team has shared decks, prior content audits, a brand voice doc, kickoff transcript, app store and analytics snapshots — score each section from those artifacts. Mark "scored from materials" in the section heading so the team can push back where they have better data.
 
-**Path B — Lens used, not formal audit.** If no audit has been run (common when fCMO has rich context from kickoff but a formal audit hasn't happened), use the rubric as a *lens* — score each of the 17 sections from available materials, mark "lens used, not formal audit" in the heading. Less rigorous but faster.
+**From a separately scored audit.** If the team has already run a scored current-state assessment (in any format), ingest those scores directly. Don't redo the work — note the date the rubric was scored and flag any sections where material has shifted since.
 
-When to choose Path A: client engagement is starting from scratch, materials are sparse, founder wants a scored deliverable.
-When to choose Path B: rich materials exist, fCMO already has 30+ pages of context, time is short.
+Either way, the output is the same: a 17-row scored table, a total out of 85, and a shape paragraph.
 
 ## The 17 sections (scored 0–5 each)
 
@@ -249,8 +248,8 @@ Some sections are easier to score from outside than others. Subjectivity tier:
 
 For subjective sections, write the rationale into the "Note" column so the team can push back if they disagree.
 
-## When the audit-marketing skill version is run
+## When a prior scored audit exists
 
-If the user runs `/audit-marketing {client-domain}` before or during the plan, use that output verbatim — don't redo the scoring. The Plan skill respects audit-marketing's outputs as the ground truth.
+If the team already has scored output from any current-state assessment, ingest those scores directly — don't redo the work. Treat that prior scoring as the ground truth for sections it covers.
 
-If the audit was run weeks ago and material has changed since (new shipped flows, new content live, etc.), note "rubric scored on YYYY-MM-DD; material has shifted since" and update any specific scores you have evidence for.
+If the prior scoring was done weeks ago and material has shifted since (new shipped flows, new content live, repositioning, etc.), note "scored on YYYY-MM-DD; material has shifted since" and update any specific scores you have current evidence for.
